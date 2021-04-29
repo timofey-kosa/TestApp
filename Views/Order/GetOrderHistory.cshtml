@@ -1,0 +1,7 @@
+﻿@model IEnumerable<OrderResponse>
+
+
+@foreach(var item in Model)
+{
+    @await Html.PartialAsync("_OrderResponse", item)
+}

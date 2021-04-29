@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ProductForCart>
+@{
+    ViewData["Title"] = "GetCart";
+}
+
+<p class="navbar-brand">Cart</p>
+
+@if (Model != null)
+{
+    <table class="table table-bordered">
+
+        <tr>
+
+            <th>ProductId</th>
+            <th>Brand</th>
+            <th>Currency</th>
+            <th>Denomination</th>
+            <th>Value</th>
+            <th>Quantity</th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td  class="even">@item.ProductId</td>
+                <td class="even">@item.BrandName
+                <td class="even">@item.Currency
+                <td class="even">@item.Denomination
+                <td>@item.Value</td>
+                <td class="even">@item.Qauntity
+
+
+
+
+            </tr>
+
+        }
+
+
+
+
+    </table>
+    <a class="btn btn-primary btn-sm"  asp-action="SubmitOrder" type="button">Submit Order </a>
+}
+else
+{
+    <h4>No products in cart</h4>
+}
+
+
+
+

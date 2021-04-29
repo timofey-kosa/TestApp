@@ -1,0 +1,31 @@
+﻿@model Account
+@{
+    ViewData["Title"] = "Balance";
+}
+
+<p class="navbar-brand">Balance</p>
+
+<table class="table table-bordered">
+
+    <tr>
+
+        <th>Id</th>
+        <th>Balance</th>
+        <th>Currency</th>
+        <th>IsActive</th>
+    </tr>
+  
+    
+    <tr>
+        
+        <td class="even">@Model.Id</td>
+        <td>@Model.Balance</td>
+        <td class="even">@Model.Currency</td>
+        <td class="even">@Model.IsActive</td>
+        
+        
+    </tr>
+
+  
+
+</table>

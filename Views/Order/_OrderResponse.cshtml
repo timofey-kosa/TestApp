@@ -1,0 +1,69 @@
+﻿@model OrderResponse
+@{
+}
+
+@if (Model != null)
+{
+<div class="container" style="float:left;">
+    <table class="table table-bordered  table-hover  table-sm table-dark" style="word-wrap:break-word;">
+
+        <tr>
+            <th>RequestId : @Model.RequestId</th>
+            <th>OrderId : @Model.OrderId</th>
+            <th>Total : @Model.Total </th>
+        </tr>
+
+        <tr>
+            <th>Cards</th>
+        </tr>
+        <tr>
+            <th>CardCode</th>
+            <th>SerialNumber</th>
+            <th>Pin</th>
+            <th>Url</th>
+
+        </tr>
+        @foreach (var item in Model.Items)
+        {
+            foreach (var card in item.Cards)
+            {
+                <tr class="border">
+                    <td class="even" style="width:20px;">@card.CardCode</td>
+                    <td class=" even" style="width:20px;">@card.SerialNumber</td>
+                    <td class=" even">@card.Pin</td>
+                    <td class="even " style="width:20px;">@card.Url.</td>
+                </tr>
+            }
+
+        }
+
+        <tr>
+            <th>FailureMessages</th>
+        </tr>
+        @foreach (var item in Model.Items)
+        {
+            @foreach (var fail in item.Failures)
+            {
+                <tr>
+                    <td class="even">@fail.FailureMessage</td>
+
+                </tr>
+
+            }
+        }
+
+
+
+
+    </table>
+</div>
+
+}
+else
+{
+    <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>@ViewBag.Message</strong>
+    </div>
+
+}

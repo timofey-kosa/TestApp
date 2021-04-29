@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ProductForView>
+@{
+    ViewData["Title"] = "Catalogs";
+}
+
+<p class="navbar-brand">Catalog</p>
+
+
+
+
+    <table class="table table-bordered ali">
+
+        <tr>
+
+            <th class="even">Id</th>
+
+            <th class="even">Name</th>
+            <th class="even">Country</th>
+            <th class="even">Currency</th>
+            <th class="even">MinFaceValue</th>
+            <th class="even">MaxFaceValue</th>
+            <th class="even">BrandName</th>
+            <th class="even">BrandDescription</th>
+            <th class="even">Value</th>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="even">@item.Id</td>
+                <td class="even">@item.Name</td>
+                <td class="even">@item.Brand.CountryCode</td>
+                <td class="even">@item.Brand.CurrencyCode</td>
+                <td class="even">@item.MinFaceValue</td>
+                <td class="even">@item.MaxFaceValue</td>
+                <td class="even">@item.Brand.Name</td>
+                <td class="even">@Html.Encode(item.Brand.Description) </td>
+
+                <td class="even"><input id="@item.Id" type="number" name="ItemValue" placeholder="Value" /></td>
+
+                <td class="even"> <input class="btn btn-primary btn-sm" asp-controller="Cart"  value="Add to Cart" onclick="AddProductToCart(@item.Id)" type="button"></td>
+            </tr>
+
+        }
+
+    </table>
+
+    <script>
+       
+        
+         function AddProductToCart(id) {
+
+             var value = document.getElementById(id).value;
+ 
+             var data = JSON.stringify({ "ProductId": id, "Value": value });
+          
+             var xhr = new XMLHttpRequest();
+             var url = "AddToCart";
+             xhr.open("POST", url, true);
+             xhr.setRequestHeader("Content-Type", "application/json");
+             xhr.send(data);
+
+         
+        }      
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+

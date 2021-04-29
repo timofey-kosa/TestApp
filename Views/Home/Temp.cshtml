@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+    @foreach (var item in Model)
+    {
+        <p>Name : @item.Name</p>
+        <p>Code: @item.Code</p>
+        <p>Description: @item.Description</p>
+        //<p> @Html.Display(@item.Currency.Code)</p>
+        //<p> @Html.Display(@item.Country.Code)</p>
+        //<p> @Html.Display(@item.Supplier.Name)</p>
+
+        //<div>@item.Products</div>
+
+        <p> ________________________________</p>
+
+    }
+}

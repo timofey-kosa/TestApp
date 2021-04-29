@@ -1,0 +1,71 @@
+[
+  {
+    "orderId": 1,
+    "requestId": "b20aafd4-2481-4b0f-833f-3f74c99a19e4",
+    "items": [
+      {
+        "brandCode": null,
+        "productId": 47,
+        "productFaceValue": 10.00,
+        "quantity": 1,
+        "pictureUrl": null,
+        "countryCode": "GB",
+        "currencyCode": "GBP",
+        "cards": [
+          {
+            "serialNumber": "",
+            "cardCode": "EFBE81889DEDFB5DC90CBEE54938199931D9C07E4AA7AB8D685430642FFDF09D7A1289D77F200C9A2CEFEF96356D882BA86836478BE5A7969F238515F9DD166E",
+            "url": "https://fulfillment-test.diggecard.com/giftcard/EFBE81889DEDFB5DC90CBEE54938199931D9C07E4AA7AB8D685430642FFDF09D7A1289D77F200C9A2CEFEF96356D882BA86836478BE5A7969F238515F9DD166E",
+            "pin": "",
+            "expirationDate": null
+          }
+        ],
+        "failures": []
+      }
+    ],
+    "status": "Confirmed",
+    "createdDate": "2020-09-30T08:54:21.385181",
+    "total": 12.82,
+    "failures": []
+  },
+  {
+    "orderId": 2,
+    "requestId": "28a0f318-a8e7-454b-a127-f664d67a41d7",
+    "items": [
+      {
+        "brandCode": null,
+        "productId": 47,
+        "productFaceValue": 10.00,
+        "quantity": 1,
+        "pictureUrl": null,
+        "countryCode": "GB",
+        "currencyCode": "GBP",
+        "cards": [
+          {
+            "serialNumber": "",
+            "cardCode": "B9DED63CFD36A9D6616E116C89B45FEDC2E9B041714DC01CA6E885914CE6BF1B4D9795908BE6862282D6E159AA2B5E58E3CE7C03562F4B54A0AD031E870C871B",
+            "url": "https://fulfillment-test.diggecard.com/giftcard/B9DED63CFD36A9D6616E116C89B45FEDC2E9B041714DC01CA6E885914CE6BF1B4D9795908BE6862282D6E159AA2B5E58E3CE7C03562F4B54A0AD031E870C871B",
+            "pin": "",
+            "expirationDate": null
+          }
+        ],
+        "failures": []
+      },
+      {
+        "brandCode": null,
+        "productId": 48,
+        "productFaceValue": 25.00,
+        "quantity": 1,
+        "pictureUrl": null,
+        "countryCode": "GB",
+        "currencyCode": "GBP",
+        "cards": [],
+        "failures": []
+      }
+    ],
+    "status": "Confirmed",
+    "createdDate": "2020-09-30T09:49:07.403917",
+    "total": 12.82,
+    "failures": []
+  }
+]
